@@ -9,10 +9,10 @@ from instr import *
 from final_win import FinalWin
 class Experiment():
     def __init__(self, age, t1, t2, t3):
-        self.age = age
-        self.t1 = t1
-        self.t2 = t2
-        self.t3 = t3
+        self.age = int(age)
+        self.t1 = int(t1)
+        self.t2 = int(t2)
+        self.t3 = int(t3)
 class TestWin(QWidget):
     def __init__(self):
         super().__init__()
@@ -117,10 +117,3 @@ class TestWin(QWidget):
         self.btn_test2.clicked.connect(self.timer_squats)
         self.btn_test3.clicked.connect(self.timer_final)
         self.btn_next.clicked.connect(self.next_click)
-    def results(self):
-        self.index = (4*(int(self.exp.t1)+int(self.exp.t2)+int(self.exp.t3))-200)/10
-        if self.exp.age >= 15:
-            if self.index >= 15:
-                return txt_res1
-            elif 11 <= self.index <= 14.9:
-                return txt_res2
