@@ -7,6 +7,7 @@ from PyQt5.QtWidgets import (
     QPushButton, QLabel, QListWidget, QLineEdit)
 from instr import *
 from second_win import TestWin
+
 class MainWin(QWidget):
     def __init__(self):
         super().__init__()

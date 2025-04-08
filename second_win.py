@@ -67,7 +67,7 @@ class TestWin(QWidget):
         self.hide()
     def timer_test(self):
         global time
-        time = QTime(0, 1, 0)
+        time = QTime(0, 0, 15)
         self.timer = QTimer()
         self.timer.timeout.connect(self.timer1Event)
         self.timer.start(1000)
